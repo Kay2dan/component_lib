@@ -5,15 +5,17 @@ import Button from "./Button";
 export default {
   component: Button,
   title: "Component/Button",
-  argTypes: {
-
-  }
+  argTypes: {}
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
+
 DefaultButton.args = {
+  classes: "",
+  disabled: false,
   onClickHandler: () => console.log("default button"),
+  parentClasses: "",
   type: "button"
 };
